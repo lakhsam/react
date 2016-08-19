@@ -9,5 +9,5 @@ let finalCreateStore = compose(
 
 
 export default function configureStore(initialState = { texts: [] }) {
-  return finalCreateStore(reducer, initialState)
+  return finalCreateStore(reducer, initialState,window.devToolsExtension ? window.devToolsExtension() : undefined)
 }
